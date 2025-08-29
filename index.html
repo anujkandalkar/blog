@@ -3,83 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Geetika Narang | Professional Blog</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Dr. Geetika Narang</title>
+  <style>
+    * {box-sizing:border-box;margin:0;padding:0;}
+    body {font-family:'Segoe UI',sans-serif;background:#f8fafc;color:#2d3748;line-height:1.6;scroll-behavior:smooth;}
 
+    header {background:linear-gradient(135deg,#0052D4,#4364F7,#6FB1FC);padding:60px 20px;text-align:center;color:#fff;}
+    header img {width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:15px;border:5px solid #fff;}
+    header h1 {font-size:2.4rem;}
+    header h2 {margin:8px 0;font-weight:500;}
+    header p {margin:4px 0;font-size:1rem;}
+
+    nav {background:#1e3a8a;position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+    nav .nav-container {max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:center;padding:10px 20px;position:relative;}
+    nav .menu-toggle {display:none;font-size:1.6rem;color:#fff;background:none;border:none;cursor:pointer;position:absolute;left:20px;}
+    nav ul {display:flex;list-style:none;}
+    nav li {margin:0 15px;}
+    nav a {color:#fff;text-decoration:none;font-weight:600;transition:.3s;}
+    nav a:hover {color:#fbbf24;}
+
+    section {padding:60px 20px;max-width:1100px;margin:auto;border-bottom:1px solid #e5e7eb;}
+    section h2 {font-size:1.8rem;color:#1e3a8a;text-align:center;margin-bottom:25px;position:relative;}
+    section h2::after {content:'';display:block;width:60px;height:4px;background:#f59e0b;margin:12px auto 0;border-radius:2px;}
+
+    #about p {max-width:900px;margin:12px auto;text-align:justify;font-size:1.05rem;}
+
+    .publications-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+    .pub-card {border:1px solid #ddd;border-radius:12px;padding:1rem;background:linear-gradient(135deg,#fdfbfb,#ebedee);box-shadow:0 4px 10px rgba(0,0,0,.08);transition:transform .3s;}
+    .pub-card:hover {transform:translateY(-5px);}
+    .pub-title {font-weight:700;color:#1e293b;margin-bottom:.6rem;}
+    .pub-meta {font-size:.9rem;color:#475569;margin-bottom:.8rem;}
+    .pub-download {display:inline-block;padding:.45rem .9rem;background:#1e40af;color:#fff;border-radius:6px;text-decoration:none;font-size:.85rem;}
+    .pub-download:hover {background:#f59e0b;}
+
+    table {width:100%;border-collapse:collapse;margin:20px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,.08);font-size:.95rem;}
+    th,td {padding:12px;border:1px solid #e5e7eb;text-align:left;}
+    th {background:#1e3a8a;color:#fff;}
+    td a {color:#1d4ed8;font-weight:bold;text-decoration:none;}
+    td a:hover {color:#f59e0b;}
+
+    #achievements {background:linear-gradient(135deg,#fdfcfb,#e2d1c3);border-radius:16px;padding:30px;box-shadow:0 4px 16px rgba(0,0,0,.1);}
+    .achievements-list {max-width:700px;margin:auto;}
+    .achievements-list li {margin:14px 0;padding-left:32px;position:relative;font-size:1rem;color:#374151;}
+    .achievements-list li::before {content:"🏆";position:absolute;left:0;top:0;}
+
+    footer {background:#1e3a8a;padding:30px;text-align:center;color:#e0e7ff;}
+    footer h2 {color:#fbbf24;margin-bottom:12px;}
+    footer p {margin:6px 0;font-size:.95rem;}
+    footer a {color:#93c5fd;text-decoration:none;}
+    footer a:hover {text-decoration:underline;color:#fbbf24;}
+
+    #topBtn {position:fixed;bottom:20px;right:20px;padding:12px;font-size:18px;border:none;background:#f59e0b;color:#111;border-radius:50%;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3);display:none;}
+    #topBtn:hover {background:#1e40af;color:#fff;}
+
+    @media(max-width:768px){
+      nav ul {display:none;flex-direction:column;width:100%;background:#1e3a8a;text-align:center;}
+      nav ul.show {display:flex;}
+      nav li {margin:12px 0;}
+      nav .menu-toggle {display:block;}
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="profile-image">
-      <img src="images/1687509073412.jpg" alt="Dr. Geetika Narang">
-    </div>
-    <div class="profile-info">
-      <h1>Dr. Geetika Narang</h1>
-      <h2>Associate Professor & HOD</h2>
-      <p>Computer Department, Trinity College of Engineering and Research</p>
-      <p><strong>Qualification:</strong> Ph.D.</p>
-      <p><strong>Experience:</strong> 17 Years (Teaching)</p>
-      <p><strong>Area of Interest:</strong> Networking, Data Mining</p>
-      <p><strong>Email:</strong> <a href="mailto:geetikanarang.tcoer@kjei.edu.in">geetikanarang.tcoer@kjei.edu.in</a></p>
-    </div>
+  <header>
+    <img src="images/1687509073412.jpg" alt="Dr. Geetika Narang">
+    <h1>Dr. Geetika Narang</h1>
+    <h2>Associate Professor & HOD</h2>
+    <p>Computer Department, Trinity College of Engineering and Research</p>
+    <p><strong>Qualification:</strong> Ph.D. | <strong>Experience:</strong> 17 Years</p>
+    <p><strong>Area of Interest:</strong> Networking, Data Mining</p>
+    <p><strong>Email:</strong> <a href="mailto:geetikanarang.tcoer@kjei.edu.in" style="color:#fbbf24;">geetikanarang.tcoer@kjei.edu.in</a></p>
   </header>
 
   <nav>
-    <ul id="navMenu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li class="dropdown">
-        <a href="#study" id="studyLink">Study Material</a>
-   
-      </li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#study">Study Material</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <main>
-    <section id="about" class="section">
+       <section id="about">
       <h2>About</h2>
-      <p>Dr. Geetika Narang is an Associate Professor and Head of the Computer Department at Trinity College of Engineering and Research, Pune. With over 17 years of experience in teaching both undergraduate and postgraduate courses, she has been serving as the Head of the Department for the past 5 years. She holds a Ph.D. in Computer Science and specializes in Networking and Data Mining.</p>
-      <p>A passionate lecturer and researcher, Dr. Narang has published over 35 papers in national and international journals and conferences, with 15 of them indexed in Scopus. She is also an approved Co-Guide at Amity University, Jaipur and JJTU. Her academic contributions reflect a deep commitment to research, mentorship, and advancing the field of computer science.</p>
+      <p>Dr. Geetika Narang is an Associate Professor and Head of the Computer Department at Trinity College of Engineering and Research, Pune. With over 17 years of experience in teaching undergraduate and postgraduate courses, she has been serving as HOD for the past 5 years. She holds a Ph.D. in Computer Science and specializes in Networking and Data Mining.</p>
+      <p>A passionate lecturer and researcher, Dr. Narang has published over 35 papers in national and international journals and conferences, with 15 indexed in Scopus. She is also an approved Co-Guide at Amity University, Jaipur and JJTU.</p>
     </section>
 
-    <section id="publications" class="section">
+    <section id="publications">
       <h2>Publications</h2>
       <div class="publications-grid">
         <div class="pub-card">
           <h3 class="pub-title">Diagnosis of Vector Borne Disease using Machine Learning</h3>
-          <p class="pub-meta"><strong>Journal:</strong> International Journal of Intelligent Systems <br><strong>Year:</strong> 2023</p>
-          <a class="pub-download" href="https://ijisae.org/index.php/IJISAE/article/view/2721">Read More</a>
+          <p class="pub-meta"><strong>Journal:</strong> International Journal of Intelligent Systems<br><strong>Year:</strong> 2023</p>
+          <a href="https://ijisae.org/index.php/IJISAE/article/view/2721" class="pub-download">Read More</a>
         </div>
         <div class="pub-card">
           <h3 class="pub-title">Development of an Optimized Ensemble Classifier</h3>
-          <p class="pub-meta"><strong>Publisher:</strong> Springer Lecture Notes <br><strong>Year:</strong> 2023</p>
-          <a class="pub-download" href="https://www.sciencedirect.com/science/article/abs/pii/S1746809423002422">Read More</a>
+          <p class="pub-meta"><strong>Publisher:</strong> Springer Lecture Notes<br><strong>Year:</strong> 2023</p>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S1746809423002422" class="pub-download">Read More</a>
         </div>
         <div class="pub-card">
           <h3 class="pub-title">Dengue Fever Prediction Using Classification & Recommendation</h3>
-          <p class="pub-meta"><strong>Conference:</strong> ICICIS Conference <br><strong>Year:</strong> 2023</p>
-          <a class="pub-download" href="https://www.sciencedirect.com/science/article/abs/pii/S1746809423002422">Read More</a>
+          <p class="pub-meta"><strong>Conference:</strong> ICICIS Conference<br><strong>Year:</strong> 2023</p>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S1746809423002422" class="pub-download">Read More</a>
         </div>
       </div>
     </section>
 
-    <section id="study" class="section">
-      <h2>Study Material</h2>
-      <ul class="study-list">
-        <li><strong>CNS:</strong> <a href="StudyMaterial/CNS.html">View Material</a></li>
-        <li><strong>WT:</strong> <a href="StudyMaterial/WT.html">View Material</a></li>
-      </ul>
+    <section id="study">
+      <h2>Study Material - Computer Network Security (CNS)</h2>
+      <table>
+        <thead><tr><th>No.</th><th>Unit Name</th><th>Download</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Introduction To Computer Networks</td><td><a href="https://drive.google.com/drive/folders/1xhfEXH7khpEkUQLkkGwCS-ua7JDjbQWv?usp=drive_link">Click Here</a></td></tr>
+          <tr><td>2</td><td>Data Link Layer</td><td><a href="https://drive.google.com/drive/folders/1Ui_nCwn3DKRHBMl46METHCkAnU3gbmaY?usp=drive_link">Click Here</a></td></tr>
+          <tr><td>3</td><td>Network Layer</td><td><a href="https://drive.google.com/drive/folders/1pBwx96YfeaXQ7OF57kyclsrmhuVi0A51?usp=drive_link">Click Here</a></td></tr>
+          <tr><td>4</td><td>Transport Layer</td><td><a href="https://docs.google.com/presentation/d/1B2Ezw_qs3u3034TyBL_3oAjCCO1nHYEB/edit?usp=drive_link">Click Here</a></td></tr>
+          <tr><td>5</td><td>Application Layer</td><td><a href="https://docs.google.com/presentation/d/1nlNbCVnEDQzLEvwgTw6GZ2nqGahJ04Sn/edit?usp=drive_link">Click Here</a></td></tr>
+          <tr><td>6</td><td>Security</td><td><a href="https://drive.google.com/drive/folders/1yGBR46cXzy7vMjIcrp6a8EB-khjgSbWV?usp=drive_link">Click Here</a></td></tr>
+        </tbody>
+      </table>
+      <h3 style="text-align:center;">Previous Year Question Papers: <a href="https://drive.google.com/drive/folders/1W5Wo5A9aO7I7l3JnUWHyueBn7sBYlDS0?usp=drive_link">Click Here</a></h3>
+
+      <h2 style="margin-top:40px;">Study Material - Web Technologies (WT)</h2>
+      <table>
+        <thead><tr><th>No.</th><th>Unit Name</th><th>Download</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Web Essentials and Mark-up Language (HTML)</td><td><a href="#">Click Here</a></td></tr>
+          <tr><td>2</td><td>Client-Side Technologies: JavaScript and DOM</td><td><a href="#">Click Here</a></td></tr>
+          <tr><td>3</td><td>Java Servlets and XML</td><td><a href="#">Click Here</a></td></tr>
+          <tr><td>4</td><td>JSP and Web Services</td><td><a href="#">Click Here</a></td></tr>
+          <tr><td>5</td><td>Server-Side Scripting Languages</td><td><a href="#">Click Here</a></td></tr>
+          <tr><td>6</td><td>Ruby and Rails</td><td><a href="#">Click Here</a></td></tr>
+        </tbody>
+      </table>
+      <h3 style="text-align:center;">Previous Year Question Papers: <a href="https://drive.google.com/drive/u/0/folders/1-sBQWiZMdNQdRB4ec6-I4Jjq5cM4PFRs">Click Here</a></h3>
     </section>
 
-    <section id="achievements" class="section">
+    <section id="achievements">
       <h2>Achievements</h2>
       <ul class="achievements-list">
-        <li><strong>2023:</strong> Best Paper Award – "Diagnosis of Vector Borne Disease using Machine Learning"</li>
-        <li>Awarded by NVIDIA with Jetson Nano™ Developer Kit for the support extended to maximize the reach of NVIDIA GTC held during April 12–23, 2021.</li>
+        <li><strong>2023:</strong> Best Paper Award – Diagnosis of Vector Borne Disease using Machine Learning</li>
+        <li>Awarded by NVIDIA with Jetson Nano™ Developer Kit for support in NVIDIA GTC 2021</li>
         <li><strong>2023:</strong> Research Excellence Award – Optimized Ensemble Classifier (Springer Lecture Notes)</li>
-       
-        <li>Awarded by London School of Digital Business for valuable contribution to society</li>
+        <li>Awarded by London School of Digital Business for contribution to society</li>
         <li>Awarded by IBM as Best Mentor Award for TMC 2012</li>
       </ul>
     </section>
@@ -90,6 +163,24 @@
     <p>Email: <a href="mailto:geetikanarang.tcoer@kjei.edu.in">geetikanarang.tcoer@kjei.edu.in</a></p>
     <p>Phone: +91 96898 96065</p>
     <p>Address: Computer Dept., Trinity College of Engineering and Research, Pune</p>
+    <p>© <span id="year"></span> Professional Blog</p>
   </footer>
+
+  <button id="topBtn">↑</button>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('show');
+      });
+    });
+    const topBtn=document.getElementById('topBtn');
+    window.addEventListener('scroll',()=>{if(window.scrollY>200){topBtn.style.display='block';}else{topBtn.style.display='none';}});
+    topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
